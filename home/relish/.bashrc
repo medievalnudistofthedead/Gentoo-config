@@ -1,0 +1,36 @@
+# /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+
+# Put your fun stuff here.
+
+alias 'update1'='sudo emaint -a sync'
+alias 'update2'='sudo emerge -avuDN @world'
+alias 'depclean'='sudo emerge --depclean'
+alias 'eask'='sudo emerge --ask'
+alias 'editmake'='sudo nano /etc/portgage/make.conf'
+alias 'packageuse'='sudo nano /etc/portgage/package.use/'
+alias 'packageacceptkeywords'='sudo nano /etc/portage/package.accept_keywords/'
+alias 'dbus'='DBUS_SYSTEM_BUS_ADDRESS=unix:path=/run/host/var/run/dbus/system_bus_socket'
+
+export PATH=/home/relish/.local/bin/:$PATH
+export VDPAU_DRIVER=radeonsi
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
+
+eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/tokyo.omp.json)"
+
+fastfetch
+
