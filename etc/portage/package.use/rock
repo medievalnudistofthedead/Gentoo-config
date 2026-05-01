@@ -1,0 +1,4 @@
+llvm-runtimes/openmp offload llvm_targets_AMDGPU
+llvm-runtimes/offload llvm_targets_AMDGPU
+llvm-runtimes/clang-runtime offload
+sci-libs/hipBLAS rocsolver

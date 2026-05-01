@@ -1,0 +1,5 @@
+x11-libs/libdrm video_cards_radeon
+kde-plasma/plasma-meta flatpak oxygen-theme qt5 rdp thunderbolt
+net-misc/freerdp server
+dev-qt/qtpositioning geoclue
+kde-apps/kdeutils-meta 7zip rar lrz
