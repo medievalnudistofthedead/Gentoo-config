@@ -21,10 +21,7 @@ alias 'update1'='sudo emaint -a sync'
 alias 'update2'='sudo emerge -avuDN @world'
 alias 'depclean'='sudo emerge --depclean'
 alias 'eask'='sudo emerge --ask'
-alias 'editmake'='sudo nano /etc/portgage/make.conf'
-alias 'packageuse'='sudo nano /etc/portgage/package.use/'
-alias 'packageacceptkeywords'='sudo nano /etc/portage/package.accept_keywords/'
-alias 'dbus'='DBUS_SYSTEM_BUS_ADDRESS=unix:path=/run/host/var/run/dbus/system_bus_socket'
+alias 'update3'='sudo smart-live-rebuild'
 
 export PATH=/home/relish/.local/bin/:$PATH
 export VDPAU_DRIVER=radeonsi
@@ -33,4 +30,3 @@ export HSA_OVERRIDE_GFX_VERSION=10.3.0
 eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/tokyo.omp.json)"
 
 fastfetch
-
